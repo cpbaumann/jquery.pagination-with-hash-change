@@ -62,7 +62,6 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
-.chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
 
 #wrapper{
   margin: 0 auto;
@@ -78,7 +77,6 @@ footer{
   background-color: #eee;
 }
 
-
 #content{
   padding: 1em;
   margin: 5px;
@@ -86,53 +84,54 @@ footer{
   border: 1px #ccc solid;
 }
 
-
-#gallery{
-
+ul#gallery{
+  list-style: none;
+  margin:0;
+  padding:0;
 }
 
-            .gal-item{
-                float: left; 
-                margin: 5px 5px 0 0;
-                width: 75px;
-                height: 75px;
-                background-color: #DDD;
-                text-align: center;
-                line-height: 75px;
-                color: black;
-                font-size: 22px;
-            }
+#gallery li{
+  float: left; 
+  margin: 5px 5px 0 0;
+  width: 75px;
+  height: 75px;
+  background-color: #DDD;
+  text-align: center;
+  line-height: 75px;
+  color: black;
+  font-size: 22px;
+}
 
-            .page-nav ol,   
-            .page-nav ul{
-                overflow: hidden;
-                list-style: none;
-                margin: 2em 0 1em 0;
-                padding: 0;
-            }
+.page-nav ol,   
+.page-nav ul{
+  overflow: hidden;
+  list-style: none;
+  margin: 2em 0 1em 0;
+  padding: 0;
+}
 
-            .page-nav li{
-                float: left;
-                cursor: pointer;
-                margin: 0 .5em 0 0;
-            }
+.page-nav li{
+  float: left;
+  cursor: pointer;
+  margin: 0 .5em 0 0;
+}
 
-            .page-nav a{
-                display: block;
-                cursor: pointer;
-                height: 1.4em;
-                width: 1.4em;
-                border: 1px #ccc solid;
-                line-height: 1.4em;
-                text-align: center;
-                color: #111;
-                text-decoration: none;
-            }
+.page-nav a{
+  display: block;
+  cursor: pointer;
+  height: 1.4em;
+  width: 1.4em;
+  border: 1px #ccc solid;
+  line-height: 1.4em;
+  text-align: center;
+  color: #111;
+  text-decoration: none;
+}
 
-            .page-nav .active a{
-                border-color: red;
-                color: #f00;
-            }
+.page-nav .active a{
+  border-color: red;
+  color: #f00;
+}
 
 
 

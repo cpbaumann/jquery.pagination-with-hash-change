@@ -6,7 +6,7 @@
     $.fn.extend({
         paginationwithhashchange: function(options) {
 
-           var defaults = {
+            var defaults = {
                 initialPage: 1,
                 pagingId: ".page-nav",
                 itemsPerPage: 8,
@@ -40,7 +40,7 @@
                     for (var i = (page-1)*itemsPerPage; i < ((page-1)*itemsPerPage) + itemsPerPage; i++) {
                         obj.children().eq(i).show();
                     }    
-                }
+                };
 
                 var pageNav = function() {
 
@@ -61,11 +61,11 @@
                         });
                     };
 
-                    if(typeof(page) == 'undefined' && window.location.hash == ''){    
+                    if(typeof(page) == 'undefined' && window.location.hash == '') {    
                         // inital active status
                         $(pagingId + ' li').eq(initialPage-1).addClass('active');
                     }              
-                }    
+                };       
 
                 var getActiveStatus = function() {
                     var d = window.location.hash.replace('#', '')

@@ -12,15 +12,15 @@ Adds Pagination with hash change
 
 ```html
 <div class="page-nav"></div>
-<div id="gallery" class="clearfix">
-  <div class="gal-item">1</div>
-  <div class="gal-item">2</div>
-  <div class="gal-item">3</div>
-  <div class="gal-item">4</div>
+<ul id="gallery" class="clearfix">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
 
 
-  <div class="gal-item">30</div>
-</div> 
+  <li>30</li>
+</ul> 
 ```
 
 ### jQuery
@@ -40,7 +40,7 @@ Use the plugin as follows:
 
 * Requires jQuery 1.7+. 
 * is reload save via # hashes
-* teste in IE 7,8,9, FF, Chrome
+* teste in IE 7,8,9, FF 11, Chrome
 
 
 ## License

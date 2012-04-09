@@ -6,59 +6,58 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-      <div id="wrapper">
-    <header>
-     <h1>Demo Pagination with hash change</h1>
-    </header>
-    <div id="content">
-  <div id="container">
-  <div class="page-nav"></div>
-  <div id="gallery" class="clearfix">
-     <div>1</div>
-     <div>2</div>
-     <div>3</div>
-     <div>4</div>
-     <div>5</div>
-     <div>6</div>
-     <div>7</div>
-     <div>8</div>
-     <div>9</div>
-     <div>10</div>
-     <div>11</div>
-     <div>12</div>
-     <div>13</div>
-     <div>14</div>
-     <div>15</div>
-     <div>16</div>
-     <div>17</div>
-     <div>18</div>
-     <div>19</div>
-     <div>20</div>
-     <div>21</div>
-     <div>22</div>
-     <div>23</div>
-     <div>24</div>
-     <div>25</div>
-     <div>26</div>
-     <div>27</div>
-     <div>28</div>
-     <div>29</div>
-     <div>30</div>
-  </div>
-  </div> <!--! end of #container -->
+    <div id="wrapper">
+      <header>
+        <h1>Demo Pagination with hash change</h1>
+      </header>
+      <div id="content">
+        <div id="container">
+          <div class="page-nav"></div>
+          <ul id="gallery" class="clearfix">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>10</li>
+            <li>11</li>
+            <li>12</li>
+            <li>13</li>
+            <li>14</li>
+            <li>15</li>
+            <li>16</li>
+            <li>17</li>
+            <li>18</li>
+            <li>19</li>
+            <li>20</li>
+            <li>21</li>
+            <li>22</li>
+            <li>23</li>
+            <li>24</li>
+            <li>25</li>
+            <li>26</li>
+            <li>27</li>
+            <li>28</li>
+            <li>29</li>
+            <li>30</li>
+          </ul>
+        </div> <!--! end of #container -->
       </div>
-    <footer>
-    </footer>
+    <footer></footer>
   </div>
   <script src='js/libs/jquery-1.7.2.min.js'></script>
   <script src='js/jquery.pagination-with-hash-change.js'></script>
   <script>
-  $(document).ready(function() {
-    $('#gallery').paginationwithhashchange({
-            pagingId: ".page-nav",
-            itemsPerPage: 5
-     });
-  });
+    $(document).ready(function() {
+      $('#gallery').paginationwithhashchange({
+        pagingId: ".page-nav",
+        itemsPerPage: 5
+      });
+    });
   </script>
 </body>
 </html>
