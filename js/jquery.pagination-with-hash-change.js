@@ -9,7 +9,7 @@
            var defaults = {
                 initialPage: 1,
                 pagingId: ".page-nav",
-                itemsPerPage: 5,
+                itemsPerPage: 8,
                 pagingList: 'ul'
             };
 
