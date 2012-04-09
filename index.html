@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+      <div id="wrapper">
+    <header>
+     <h1>Demo Pagination with hash change</h1>
+    </header>
+    <div id="content">
+  <div id="container">
+  <div class="page-nav"></div>
+  <div id="gallery" class="clearfix">
+     <div class="gal-item">1</div>
+     <div class="gal-item">2</div>
+     <div class="gal-item">3</div>
+     <div class="gal-item">4</div>
+     <div class="gal-item">5</div>
+     <div class="gal-item">6</div>
+     <div class="gal-item">7</div>
+     <div class="gal-item">8</div>
+     <div class="gal-item">9</div>
+     <div class="gal-item">10</div>
+     <div class="gal-item">11</div>
+     <div class="gal-item">12</div>
+     <div class="gal-item">13</div>
+     <div class="gal-item">14</div>
+     <div class="gal-item">15</div>
+     <div class="gal-item">16</div>
+     <div class="gal-item">17</div>
+     <div class="gal-item">18</div>
+     <div class="gal-item">19</div>
+     <div class="gal-item">20</div>
+     <div class="gal-item">21</div>
+     <div class="gal-item">22</div>
+     <div class="gal-item">23</div>
+     <div class="gal-item">24</div>
+     <div class="gal-item">25</div>
+     <div class="gal-item">26</div>
+     <div class="gal-item">27</div>
+     <div class="gal-item">28</div>
+     <div class="gal-item">29</div>
+     <div class="gal-item">30</div>
+  </div>
+  </div> <!--! end of #container -->
+      </div>
+    <footer>
+    </footer>
+  </div>
+  <script src='js/libs/jquery-1.7.2.min.js'></script>
+  <script src='js/jquery.pagination-with-hash-change.js'></script>
+  <script>
+  $(document).ready(function() {
+     $('#gallery').paginationwithhashchange({
+                pagingId: ".page-nav",
+                itemsPerPage: 5
+     });
+  });
+  </script>
+</body>
+</html>
