@@ -40,7 +40,7 @@ Use the plugin as follows:
 
 * Requires jQuery 1.7+. 
 * is reload save via # hashes
-* teste in IE 7,8,9, FF 11, Chrome
+* tested in IE 7,8,9, FF 11, Chrome
 
 
 ## License

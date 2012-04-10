@@ -51,7 +51,7 @@
                         $(pagingId + ' li a').click(function(e){ 
                             var hash = this.hash;
                             e.preventDefault();
-                            var newURL = "//" + window.location.host + window.location.pathname + hash;
+                            var newURL = "//" + window.location.host + window.location.pathname + window.location.search + hash;
                             
                             window.location = newURL;
                             page = $(this).attr('data-index');
