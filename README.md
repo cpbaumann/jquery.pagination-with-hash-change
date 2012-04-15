@@ -36,7 +36,7 @@ Use the plugin as follows:
 
 ### HTML/CSS
 
-The generated HTML source in ```html <div class="page-nav"></div> ```:
+The generated HTML source in ``` <div class="page-nav"> </div> ```:
 
 ```html
 <ul>
