@@ -22,7 +22,6 @@ Adds Pagination with hash change
   <li>30</li>
 </ul> 
 ```
-
 ### jQuery
 
 Use the plugin as follows:
@@ -35,6 +34,20 @@ Use the plugin as follows:
 });
 ```
 
+### HTML/CSS
+
+The generated HTML source in ```html <div class="page-nav"></div> ```:
+
+```html
+<ul>
+	<li class="active"><a data-index="1" href="#1">1</a></li>
+	<li><a data-index="2" href="#2">2</a></li>
+	<li><a data-index="3" href="#3">3</a></li>
+	<li><a data-index="3" href="#3">3</a></li>
+
+	<li><a data-index="30" href="#30">30</a></li>
+</ul>
+```
 
 ## Notes
 
