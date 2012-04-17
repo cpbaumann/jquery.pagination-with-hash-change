@@ -40,15 +40,18 @@
 
                 var pageNav = function() {
 
-                    var ul = $('<' + pagingList + '></' + pagingList + '>').appendTo(pagingId);
-                    var i = 1;
-                    var html = '';
-                    
+                    var htmlPagingList = '<' + pagingList + '></' + pagingList + '>',
+                        i = 1;
+                        htmlLi = '',
+                        objUl = null;
+
+
                     for( i = 1; i <= numPages; i += 1 ){
-                        html += '<li><a data-index="' + i + '" href="#' + i +'">' + i + '</a></li>';
+                        htmlLi += '<li><a data-index="' + i + '" href="#' + i +'">' + i + '</a></li>';
                      };
 
-                    $(html).appendTo(ul);
+                    objUl = $(htmlPagingList).appendTo(pagingId), 
+                    $(htmlLi).appendTo(objUl);
                             
                     $(pagingId + ' li a').click(function(e){ 
                         var hash = this.hash;
