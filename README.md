@@ -53,7 +53,7 @@ The generated HTML source in ``` <div class="page-nav"> </div> ```:
 
 * Requires jQuery 1.7+. 
 * is reload save via # hashes
-* tested in IE 7,8,9, FF 11, Chrome
+* tested in IE 7,8,9, Safarie, Firefox, Chrome
 
 
 ## License

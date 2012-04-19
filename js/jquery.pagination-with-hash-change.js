@@ -25,8 +25,6 @@
                     numItems = obj.children().length,
                     numPages = Math.ceil(numItems/itemsPerPage);
 
-                obj.children().hide();    
-
                 var showPage = function(page) {
                     obj.children().hide();
                     var i,
