@@ -8,10 +8,12 @@
   <body>
     <div id="wrapper">
       <header>
-        <h1>Demo Pagination with hash change</h1>
+        <h1>Pagination with hash change jQuery Plugin</h1><p> Adds Pagination with hash change</p>
+        <p><a href="https://github.com/cpbaumann/jquery.pagination-with-hash-change">on github</a></p>
       </header>
       <div id="content">
         <div id="container">
+          <h2>Demo</h2>
           <div class="page-nav"></div>
           <ul id="gallery" class="clearfix">
             <li>1</li>
@@ -45,9 +47,70 @@
             <li>29</li>
             <li>30</li>
           </ul>
+
+
+
+<h2>Usage</h2>
+<h3>HTML</h3>
+<pre>
+<code>
+&lt;div class="page-nav">&lt;/div&gt;
+&lt;ul id="gallery" class="clearfix"&gt;
+&nbsp;&nbsp;  &lt;li&gt;1&lt;/li&gt;
+&nbsp;&nbsp;  &lt;li&gt;2&lt;/li&gt;
+&nbsp;&nbsp;  &lt;li&gt;3&lt;/li&gt;
+&nbsp;&nbsp;  &lt;li&gt;4&lt;/li&gt;
+
+
+&nbsp;&nbsp;  &lt;li&gt;30&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+
+<h3>jQuery</h3>
+<p>Use the plugin as follows:</p>
+<pre>
+<code>
+$('#gallery').paginationwithhashchange({
+&nbsp;&nbsp;  pagingId: ".page-nav",
+&nbsp;&nbsp;  itemsPerPage: 5
+});
+</code>
+</pre>
+
+<h3>HTML/CSS</h3>
+
+<p>The generated HTML source in <span class="code">&lt;div class="page-nav"&gt; &lt;/div&gt;</span>: 
+
+
+<pre>
+<code>
+&lt;ul&gt;
+&nbsp;&nbsp;  &lt;li class="active"&gt;&lt;a data-index="1" href="#1"&gt;1&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;  &lt;li&gt;&lt;a data-index="2" href="#2"&gt;2&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;  &lt;li&gt;&lt;a data-index="3" href="#3"&gt;3&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;  &lt;li&gt;&lt;a data-index="3" href="#3"&gt;3&lt;/a&gt;&lt;/li&gt;
+
+&nbsp;&nbsp;  &lt;li&gt;&lt;a data-index="30" href="#30"&gt;30&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code>
+</pre>
+
+<h2>Notes</h2>
+<ul>
+  <li>Requires jQuery 1.7+.
+<li>is reload save via # hashes
+<li>tested in IE 7,8,9, Safarie, Firefox, Chrome
+</ul>
+<h2>License</h2>
+<p>This plugin is dual licensed under the MIT and GPL licenses.</p> 
+
+
         </div> <!--! end of #container -->
       </div>
-    <footer></footer>
+    <footer>
+
+    </footer>
   </div>
   <script src='js/libs/jquery-1.7.2.min.js'></script>
   <script src='js/jquery.pagination-with-hash-change.js'></script>

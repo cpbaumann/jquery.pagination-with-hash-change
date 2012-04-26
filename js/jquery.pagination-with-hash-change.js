@@ -43,11 +43,11 @@
                         htmlLi = '',
                         objUl = null;
 
-
                     for( i = 1; i <= numPages; i += 1 ){
                         htmlLi += '<li><a data-index="' + i + '" href="#' + i +'">' + i + '</a></li>';
                      };
 
+                    
                     objUl = $(htmlPagingList).appendTo(pagingId), 
                     $(htmlLi).appendTo(objUl);
                             
