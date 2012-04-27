@@ -27,12 +27,12 @@ Adds Pagination with hash change
 Use the plugin as follows:
 
 ```js
-<script src='js/libs/jquery-1.7.2.min.js'></script>
-<script src='js/jquery.pagination-with-hash-change.js'></script>
+<script src="js/libs/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.pagination-with-hash-change.js"></script>
 <script>
   $(document).ready(function() {
     $('#gallery').paginationwithhashchange({
-      pagingId: ".page-nav",
+      pagingId: '.page-nav',
       itemsPerPage: 5
     });
   });
