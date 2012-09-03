@@ -15,7 +15,7 @@
       <div id="content">
         <div id="container">
           <h2>Demo</h2>
-          <div class="page-nav"></div>
+          <div id="paging-nav"></div>
           <ul id="gallery" class="clearfix">
             <li>1</li>
             <li>2</li>
@@ -55,7 +55,7 @@
 <h3>HTML</h3>
 <pre>
 <code>
-&lt;div class="page-nav">&lt;/div&gt;
+&lt;div id="paging-nav">&lt;/div&gt;
 &lt;ul id="gallery" class="clearfix"&gt;
 &nbsp;&nbsp;  &lt;li&gt;1&lt;/li&gt;
 &nbsp;&nbsp;  &lt;li&gt;2&lt;/li&gt;
@@ -73,7 +73,7 @@
 <pre>
 <code>
 $('#gallery').paginationwithhashchange({
-&nbsp;&nbsp;  pagingId: '.page-nav',
+&nbsp;&nbsp;  pagingId: '#paging-nav',
 &nbsp;&nbsp;  itemsPerPage: 5
 });
 </code>
@@ -81,18 +81,18 @@ $('#gallery').paginationwithhashchange({
 
 <h3>HTML/CSS</h3>
 
-<p>The generated HTML source in <span class="code">&lt;div class="page-nav"&gt; &lt;/div&gt;</span>: 
+<p>The generated HTML source in <span class="code">&lt;div id="paging-nav" &gt; &lt;/div&gt;</span>: 
 
 
 <pre>
 <code>
 &lt;ul&gt;
-&nbsp;&nbsp;  &lt;li class="active"&gt;&lt;a data-index="1" href="#1"&gt;1&lt;/a&gt;&lt;/li&gt;
-&nbsp;&nbsp;  &lt;li&gt;&lt;a data-index="2" href="#2"&gt;2&lt;/a&gt;&lt;/li&gt;
-&nbsp;&nbsp;  &lt;li&gt;&lt;a data-index="3" href="#3"&gt;3&lt;/a&gt;&lt;/li&gt;
-&nbsp;&nbsp;  &lt;li&gt;&lt;a data-index="3" href="#3"&gt;3&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;  &lt;li class="active"&gt;&lt;a href="#1"&gt;1&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;  &lt;li&gt;&lt;a href="#2"&gt;2&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;  &lt;li&gt;&lt;a href="#3"&gt;3&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;  &lt;li&gt;&lt;a href="#3"&gt;3&lt;/a&gt;&lt;/li&gt;
 
-&nbsp;&nbsp;  &lt;li&gt;&lt;a data-index="30" href="#30"&gt;30&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;  &lt;li&gt;&lt;a href="#30"&gt;30&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </code>
 </pre>
@@ -118,7 +118,7 @@ $('#gallery').paginationwithhashchange({
   <script>
     $(document).ready(function() {
       $('#gallery').paginationwithhashchange({
-        pagingId: '.page-nav',
+        pagingId: '#paging-nav',
         itemsPerPage: 5
       });
     });

@@ -7,10 +7,9 @@
         paginationwithhashchange: function(options) {
 
             var defaults = {
-                initialPage: 1,
-                pagingId: ".page-nav",
-                itemsPerPage: 8,
-                pagingList: 'ul'
+                initialPage: 1,          // default active page on first load
+                pagingId: "#paging-nav", // #id or .class possible
+                itemsPerPage: 8         // shown items per page
             };
 
             var options = $.extend(defaults, options);
@@ -21,7 +20,6 @@
                     initialPage = options.initialPage,
                     pagingId = options.pagingId,
                     itemsPerPage = options.itemsPerPage,
-                    pagingList = options.pagingList,
                     numItems = obj.children().length,
                     numPages = Math.ceil(numItems/itemsPerPage);
 
@@ -38,35 +36,31 @@
 
                 var pageNav = function() {
 
-                    var htmlPagingList = '<' + pagingList + '></' + pagingList + '>',
+                    var htmlPagingList = '<ul></ul>',
                         i = 1;
                         htmlLi = '',
                         objUl = null;
 
                     for( i = 1; i <= numPages; i += 1 ){
-                        htmlLi += '<li><a data-index="' + i + '" href="#' + i +'">' + i + '</a></li>';
-                     };
+                        htmlLi += '<li><a href="#' + i +'">' + i + '</a></li>';
+                    };
 
                     
                     objUl = $(htmlPagingList).appendTo(pagingId), 
                     $(htmlLi).appendTo(objUl);
-                            
-                    $(pagingId + ' li a').click(function(e){ 
-                        var hash = this.hash;
+                    
+                    $(pagingId).on('click','a',function(e){        
                         e.preventDefault();
-                        var newUrl = "//" + window.location.host + window.location.pathname + window.location.search + hash;
-                            
-                        window.location = newUrl;
-                        page = $(this).attr('data-index');
-                        $(pagingId + ' li').removeClass('active');
+                        window.location = "//" + window.location.host + window.location.pathname + window.location.search + this.hash;
+                        page = $(this).attr('href').replace('#','');
+                        $(pagingId).find('li').removeClass('active');
                         $(this).parent().addClass('active');
                         showPage(page);
                     });
                    
-
                     if(typeof(page) == 'undefined' && window.location.hash == '') {    
                         // inital active status
-                        $(pagingId + ' li').eq(initialPage-1).addClass('active');
+                        $(pagingId).find('li').eq(initialPage - 1).addClass('active');
                     }              
                 };       
 
@@ -74,8 +68,7 @@
                     var d = window.location.hash.replace('#', '')
                     if(d != ''){
                         showPage(d);
-                        $(pagingId + ' li').removeClass('active');
-                        $(pagingId + ' li').eq(d-1).addClass('active');
+                        $(pagingId).find('li').removeClass('active').eq(d - 1).addClass('active');
                     }
                 }  
                 

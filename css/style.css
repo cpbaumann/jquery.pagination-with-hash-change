@@ -102,21 +102,21 @@ ul#gallery{
   font-size: 22px;
 }
 
-.page-nav ol,   
-.page-nav ul{
+#paging-nav ol,   
+#paging-nav ul{
   overflow: hidden;
   list-style: none;
   margin: 2em 0 1em 0;
   padding: 0;
 }
 
-.page-nav li{
+#paging-nav li{
   float: left;
   cursor: pointer;
   margin: 0 .5em 0 0;
 }
 
-.page-nav a{
+#paging-nav a{
   display: block;
   cursor: pointer;
   height: 1.4em;
@@ -128,7 +128,11 @@ ul#gallery{
   text-decoration: none;
 }
 
-.page-nav .active a{
+#paging-nav a:focus{ 
+  outline: none; 
+}
+
+#paging-nav .active a{
   border-color: red;
   color: #f00;
 }
