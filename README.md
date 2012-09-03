@@ -17,7 +17,7 @@ Adds Pagination with hash change
   <li>2</li>
   <li>3</li>
   <li>4</li>
-
+  <li>5</li>
 
   <li>30</li>
 </ul> 
@@ -49,6 +49,8 @@ The generated HTML source in ``` <div id="paging-nav"> </div> ```:
 	<li><a href="#2">2</a></li>
 	<li><a href="#3">3</a></li>
 	<li><a href="#3">3</a></li>
+  <li><a href="#4">4</a></li>
+  <li><a href="#5">5</a></li>
 
 	<li><a href="#30">30</a></li>
 </ul>

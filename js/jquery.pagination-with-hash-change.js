@@ -9,7 +9,7 @@
             var defaults = {
                 initialPage: 1,          // default active page on first load
                 pagingId: "#paging-nav", // #id or .class possible
-                itemsPerPage: 8         // shown items per page
+                itemsPerPage: 8          // shown items per page
             };
 
             var options = $.extend(defaults, options);
