@@ -8,18 +8,48 @@
 
             var defaults = {
                 initialPage: 1,          // default active page on first load
-                pagingId: "#paging-nav", // #id or .class possible
-                itemsPerPage: 8          // shown items per page
+                pagingId: "#paging-nav", // #id or .class 
+                itemsPerPage: 8,         // shown items per page
+                pagingList: 'ul'         // ul or ol
             };
 
             var options = $.extend(defaults, options);
+           
+            var Url = {
 
-            return this.each(function() {
+                protocol : '//',
+                host : window.location.host,
+                pathname : window.location.pathname,
+                search : window.location.search,
+
+                change : function (hash) {
+                    window.location = this.protocol + this.host + this.pathname + this.search + hash;
+                },
+
+                getHash : function () {
+                    window.onhashchange = this.getActiveHash(); 
+                },
+
+                getActiveHash : function () {
+                    this.hash = window.location.hash;
+                },
+
+                getHashValue : function () {
+                    window.onhashchange = this.getActiveHashValue(); 
+                },
+
+                getActiveHashValue : function () {
+                    this.hashvalue = window.location.hash.replace('#', '');
+                }   
+            };
+            
+            return this.each(function(){
 
                 var obj = $(this),
                     initialPage = options.initialPage,
                     pagingId = options.pagingId,
                     itemsPerPage = options.itemsPerPage,
+                    pagingList = options.pagingList,
                     numItems = obj.children().length,
                     numPages = Math.ceil(numItems/itemsPerPage);
 
@@ -34,46 +64,61 @@
                     }    
                 };
 
-                var pageNav = function() {
+                var pageNav = function(){
 
-                    var htmlPagingList = '<ul></ul>',
+                    var htmlPagingList = '<' + pagingList + '></' + pagingList + '>',
                         i = 1;
                         htmlLi = '',
                         objUl = null;
 
                     for( i = 1; i <= numPages; i += 1 ){
                         htmlLi += '<li><a href="#' + i +'">' + i + '</a></li>';
-                    };
+                     };
                     
-                    objUl = $(htmlPagingList).appendTo(pagingId), 
+                    objUl = $(htmlPagingList).appendTo(pagingId); 
                     $(htmlLi).appendTo(objUl);
                     
                     $(pagingId).on('click','a',function(e){        
                         e.preventDefault();
-                        window.location = "//" + window.location.host + window.location.pathname + window.location.search + this.hash;
+                        Url.change(this.hash);
                         page = $(this).attr('href').replace('#','');
-                        $(pagingId).find('li').removeClass('active');
-                        $(this).parent().addClass('active');
                         showPage(page);
+                        $(pagingId).each(function(){
+                            $(this).find('li')
+                                .removeClass('active')
+                                .eq(page - 1)
+                                    .addClass('active');
+                        });
                     });
-                   
-                    if(typeof(page) == 'undefined' && window.location.hash == '') {    
-                        // inital active status
-                        $(pagingId).find('li').eq(initialPage - 1).addClass('active');
-                    }              
-                };       
+                };
 
-                var getActiveStatus = function() {
-                    var d = window.location.hash.replace('#', '')
-                    if(d != ''){
-                        showPage(d);
-                        $(pagingId).find('li').removeClass('active').eq(d - 1).addClass('active');
+                // set active status on the nav by hash
+                var setActiveStatus = function(){
+
+                    Url.getHashValue();
+                    pageNav();
+                    var page = Url.hashvalue;
+                    $(pagingId).each(function(){
+                        $(this).find('li')
+                            .removeClass('active')
+                            .eq(page - 1)
+                                .addClass('active');
+                    });
+                    showPage(initialPage);
+                }; 
+
+                var setToInitalPage = function(){
+
+                    Url.getHashValue();
+                    if(Url.hashvalue  == '') {   
+                        Url.change('#' + initialPage); 
                     }
-                }  
-                
-                showPage(initialPage);
-                pageNav();
-                getActiveStatus();
+                };
+
+ 
+                setToInitalPage();
+                setActiveStatus();
+                           
             });
         }
     });

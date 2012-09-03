@@ -54,6 +54,7 @@ The generated HTML source in ``` <div id="paging-nav"> </div> ```:
 
 	<li><a href="#30">30</a></li>
 </ul>
+
 ```
 
 ## Notes
