@@ -45,12 +45,12 @@ The generated HTML source in ``` <div id="paging-nav"> </div> ```:
 
 ```html
 <ul>
-	<li class="active"><a data-index="1" href="#1">1</a></li>
-	<li><a data-index="2" href="#2">2</a></li>
-	<li><a data-index="3" href="#3">3</a></li>
-	<li><a data-index="3" href="#3">3</a></li>
+	<li class="active"><a href="#1">1</a></li>
+	<li><a href="#2">2</a></li>
+	<li><a href="#3">3</a></li>
+	<li><a href="#3">3</a></li>
 
-	<li><a data-index="30" href="#30">30</a></li>
+	<li><a href="#30">30</a></li>
 </ul>
 ```
 

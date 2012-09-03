@@ -44,7 +44,6 @@
                     for( i = 1; i <= numPages; i += 1 ){
                         htmlLi += '<li><a href="#' + i +'">' + i + '</a></li>';
                     };
-
                     
                     objUl = $(htmlPagingList).appendTo(pagingId), 
                     $(htmlLi).appendTo(objUl);
