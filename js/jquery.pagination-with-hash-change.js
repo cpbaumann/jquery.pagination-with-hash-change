@@ -27,7 +27,7 @@
                 },
 
                 getHash : function () {
-                    window.onhashchange = this.getActiveHash(); 
+                    window.onhashchange = this.getActiveHash();
                 },
 
                 getActiveHash : function () {
@@ -43,7 +43,7 @@
                 }   
             };
             
-            return this.each(function(){
+            return this.each(function() {
 
                 var obj = $(this),
                     initialPage = options.initialPage,
@@ -64,16 +64,15 @@
                     }    
                 };
 
-                var pageNav = function(){
-
+                var pageNav = function() {
                     var htmlPagingList = '<' + pagingList + '></' + pagingList + '>',
-                        i = 1;
+                        i = 1,
                         htmlLi = '',
                         objUl = null;
 
                     for( i = 1; i <= numPages; i += 1 ){
-                        htmlLi += '<li><a href="#' + i +'">' + i + '</a></li>';
-                     };
+                        htmlLi += '<li><a href="#' + i + '">' + i + '</a></li>';
+                    }
                     
                     objUl = $(htmlPagingList).appendTo(pagingId); 
                     $(htmlLi).appendTo(objUl);
@@ -93,8 +92,7 @@
                 };
 
                 // set active status on the nav by hash
-                var setActiveStatus = function(){
-
+                var setActiveStatus = function() {
                     Url.getHashValue();
                     pageNav();
                     var page = Url.hashvalue;
@@ -107,15 +105,13 @@
                     showPage(initialPage);
                 }; 
 
-                var setToInitalPage = function(){
-
+                var setToInitalPage = function() {
                     Url.getHashValue();
                     if(Url.hashvalue  == '') {   
                         Url.change('#' + initialPage); 
                     }
                 };
 
- 
                 setToInitalPage();
                 setActiveStatus();
                            
