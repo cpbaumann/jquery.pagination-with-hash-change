@@ -1,4 +1,4 @@
-# Pagination with hash change jQuery Plugin 
+# Pagination with hash change jQuery Plugin
 
 Adds Pagination with hash change
 

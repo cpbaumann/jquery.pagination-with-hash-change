@@ -77,10 +77,10 @@
                     objUl = $(htmlPagingList).appendTo(pagingId); 
                     $(htmlLi).appendTo(objUl);
                     
-                    $(pagingId).on('click','a',function(e){        
+                    $(pagingId).on('click','a',function(e){
                         e.preventDefault();
                         Url.change(this.hash);
-                        page = $(this).attr('href').replace('#','');
+                        page = this.hash.replace('#','');
                         showPage(page);
                         $(pagingId).each(function(){
                             $(this).find('li')

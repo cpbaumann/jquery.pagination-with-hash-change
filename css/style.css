@@ -62,7 +62,26 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
+a { text-decoration: none; }
 
+html{
+  height: 100%;
+}
+
+
+body{
+  font-size: 75%;
+  height: 100%;
+  background-color: #ccc;
+  background: -webkit-linear-gradient(top, #fff, #ccc);
+  background:    -moz-linear-gradient(top, #fff, #ccc);
+  background:     -ms-linear-gradient(top, #fff, #ccc);
+  background:      -o-linear-gradient(top, #fff, #ccc);
+  background:         linear-gradient(top, #fff, #ccc);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin:1em;
+}
 
 #wrapper{
   margin: 0 auto;
@@ -83,6 +102,25 @@ footer{
   margin: 5px;
   min-height: 4em;
   border: 1px #ccc solid;
+}
+
+
+h1{
+  color: #333;
+  font-size: 1.5em;
+}
+
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover{
+  color: #D94736;
+}
+
+#container{
+  margin: 1em auto;
+  height: 100%;
 }
 
 ul#gallery{
