@@ -3,6 +3,7 @@
 */
 
 (function($) {
+"use strict";
     $.fn.extend({
         paginationwithhashchange: function(options) {
 
@@ -61,7 +62,7 @@
 
                     for (i = s; i < max; i += 1) {
                         obj.children().eq(i).show();
-                    }    
+                    }
                 };
 
                 var pageNav = function() {
@@ -80,7 +81,7 @@
                     $(pagingId).on('click','a',function(e){
                         e.preventDefault();
                         Url.change(this.hash);
-                        page = this.hash.replace('#','');
+                        var page = this.hash.replace('#','');
                         showPage(page);
                         $(pagingId).each(function(){
                             $(this).find('li')
