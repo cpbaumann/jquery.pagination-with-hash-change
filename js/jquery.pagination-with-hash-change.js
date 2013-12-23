@@ -102,7 +102,7 @@
                             .eq(page - 1)
                                 .addClass('active');
                     });
-                    showPage(initialPage);
+                    showPage(page);
                 }; 
 
                 var setToInitalPage = function() {
