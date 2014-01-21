@@ -26,16 +26,8 @@
                     window.location = this.protocol + this.host + this.pathname + this.search + hash;
                 },
 
-                getHash : function () {
-                    window.onhashchange = this.getActiveHash();
-                },
-
-                getActiveHash : function () {
-                    this.hash = window.location.hash;
-                },
-
                 getHashValue : function () {
-                    window.onhashchange = this.getActiveHashValue();
+                    this.getActiveHashValue();
                 },
 
                 getActiveHashValue : function () {

@@ -59,9 +59,9 @@ The generated HTML source in ``` <div id="paging-nav"> </div> ```:
 
 ## Notes
 
-* Requires jQuery 1.7+. 
-* is reload save via # hashes
-* tested in IE 9, 10, 11 Safarie, Firefox, Chrome
+* Requires jQuery 1.9+. 
+* # hashes of a link are used
+* tested in IEE 8, IE 9, 10, 11 Safarie, Firefox, Chrome
 
 
 ## License
