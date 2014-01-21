@@ -61,7 +61,7 @@ The generated HTML source in ``` <div id="paging-nav"> </div> ```:
 
 * Requires jQuery 1.7+. 
 * is reload save via # hashes
-* tested in IE 7,8,9, Safarie, Firefox, Chrome
+* tested in IE 9, 10, 11 Safarie, Firefox, Chrome
 
 
 ## License
