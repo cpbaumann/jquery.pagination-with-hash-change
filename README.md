@@ -2,10 +2,6 @@
 
 Adds Pagination with hash change
 
-## Demo
-
-[Demo jquery-plugins: jquery.pagination-with-hash-change/](http://spielwiese.datenschubse.de/jquery-plugins/jquery.pagination-with-hash-change/)
-
 ## Usage
 
 ### HTML
